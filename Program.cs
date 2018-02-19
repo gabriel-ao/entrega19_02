@@ -55,8 +55,14 @@ namespace aulaEntrega19_02
 
         private static void verificarLista()
         {
-            
-            
+            for (int g = 0; g < tamVetor; g++)
+            {
+                if (nomes[g] != null)
+                {
+                    Console.WriteLine("o" + (g + 1) + "nome é " + nomes[g]);
+                }
+            }
+
         }
         private static void sairPrograma()
         {
@@ -111,15 +117,7 @@ namespace aulaEntrega19_02
                 {
                     nomes[i + 1] = nome;
                 }
-                // test dos cadastros
-                for (int g = 0; g < tamVetor; g++)
-                {
-                    if (nomes[g] != null)
-                    {
-                        Console.WriteLine("o" + (g+1) + "nome é " + nomes[g]);
-                    }
-                }
-
+              
                 Console.WriteLine("\n\nDeseja cadastrar novamente (1-SIM / 2-NÃO)");
                 int opcao = Int32.Parse(Console.ReadLine());
                 if (opcao == 1)
